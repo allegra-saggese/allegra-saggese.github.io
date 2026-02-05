@@ -13,4 +13,4 @@ I hold an MSc in Environmental Economics and Climate Change from the LSE and a B
 
 I study how firms in developing countries respond to macro shocks, particularly climate change and trade policy. 
 
-Find my CV [here](/files/10-2025-Saggese-CV.pdf)
+Find my CV [here](/files/2026-02-Saggese-CV.pdf)
