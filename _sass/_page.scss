@@ -121,6 +121,14 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.data-gallery.gallery--grid.gallery--half {
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+}
+
+.data-gallery.gallery--grid.gallery--third {
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+}
+
 .gallery__item {
   margin: 0;
 }
@@ -173,6 +181,17 @@
   flex-wrap: wrap;
   gap: 0.5em 1.25em;
   font-size: $type-size-6;
+}
+
+.about-gallery.gallery--grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1em;
+}
+
+.about-gallery .gallery__item {
+  flex: 1 1 0;
+  margin: 0;
 }
 
 .page__hero {
