@@ -108,16 +108,17 @@
 }
 
 .archive .list__item {
+  padding-right: 0;
   @include breakpoint($medium) {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 
   @include breakpoint($large) {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 
   @include breakpoint($x-large) {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 }
 
