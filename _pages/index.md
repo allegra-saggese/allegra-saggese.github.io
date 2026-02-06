@@ -3,16 +3,14 @@ permalink: /
 layout: single
 author_profile: true
 recent_photos:
-  - image_path: /images/2019-headshot.png
-    alt: "Headshot"
-  - image_path: /images/bio-photo.jpg
-    alt: "Portrait"
-  - image_path: /images/bio-photo-2.jpg
-    alt: "Portrait alternate"
-  - image_path: /images/profile.png
-    alt: "Profile photo"
-  - image_path: /images/homepage.png
-    alt: "Homepage photo"
+  - image_path: /images/about-gallery/IMG_2013.JPG
+    alt: "Recent photo 1"
+  - image_path: /images/about-gallery/IMG_4314.JPG
+    alt: "Recent photo 2"
+  - image_path: /images/about-gallery/IMG_6528.JPG
+    alt: "Recent photo 3"
+  - image_path: /images/about-gallery/IMG_7359.JPG
+    alt: "Recent photo 4"
 redirect_from: 
   - /about/
   - /about.html
