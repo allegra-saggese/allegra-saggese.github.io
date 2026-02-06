@@ -14,12 +14,15 @@
     {% endif %}
 
     <!-- Download Links -->
-    {% if post.paperurl and post.slidesurl %}
-      <p><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
-    {% elsif post.paperurl %}
-      <p><a href="{{ post.paperurl }}">Download Paper</a></p>
-    {% elsif post.slidesurl %}
-      <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% if post.paperurl or post.slidesurl %}
+      <div class="archive__item-links">
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}" class="archive__item-link">Download Paper</a>
+        {% endif %}
+        {% if post.slidesurl %}
+          <a href="{{ post.slidesurl }}" class="archive__item-link">Download Slides</a>
+        {% endif %}
+      </div>
     {% endif %}
     
   </article>

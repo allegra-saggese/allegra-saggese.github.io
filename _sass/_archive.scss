@@ -48,6 +48,18 @@
   }
 }
 
+.archive__item-links {
+  margin-top: 0.25em;
+  display: flex;
+  gap: 0.75em;
+  flex-wrap: wrap;
+}
+
+.archive__item-link {
+  font-size: $type-size-7;
+  text-transform: none;
+}
+
 /* remove border*/
 .page__content {
 
