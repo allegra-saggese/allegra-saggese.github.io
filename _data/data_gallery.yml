@@ -7,18 +7,18 @@
       alt: "Line chart of share of taxable PCE and effective tax rate in CA over time"
     - image_path: /images/data-informal/tax-map-1.jpeg
       title: "Tax revenue by county"
-      caption: "Based on spending in the ACS, this is a county-level estimate for tax revenue."
+      caption: " ACS-based estimate of household spending used to calculate county-level tax revenue."
       alt: "Map of CA (2023) identifying the total tax revenue to be collected per county."
     - image_path: /images/data-informal/tax-map-2.jpeg
       title: "Tax rate by county"
-      caption: "Effective county level tax rates in CA (2023)"
+      caption: "County tax rates, CA (2023)"
       alt: "Map of CA (2023) with effective county-level tax rates, where counties may have specific sales tax measures."
     - image_path: /images/data-informal/results-1.jpeg
       title: "Estimated vs. actual CA sales tax revenue (2005-2023)"
       caption: "Actual sales tax revenue from FRED FED vs. the estimated amount of revenue derived from a PCE-based estimate"
       alt: "Line chart 2005-2023 demonstrating the difference in estimated and actual tax revenue collection."
     - image_path: /images/data-informal/results-2.jpeg
-      title: "Estimated values (normalized)"
+      title: "Estimates (2005-2023)"
       caption: "Looking at the change in the normalized value over time of key aggregate values in CA's economy"
       alt: "Line chart comparing aggregate output, labor, spending, and unemployment rate over time (min-max normalized)"
 
