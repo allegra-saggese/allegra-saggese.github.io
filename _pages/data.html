@@ -11,6 +11,9 @@ author_profile: true
 
 {% for section in site.data.data_gallery %}
   <h2>{{ section.title }}</h2>
+  {% if section.description %}
+    <p class="data-gallery__description">{{ section.description | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+  {% endif %}
   {% if section.items and section.items.size > 0 %}
     {% include gallery gallery=section.items class="data-gallery" %}
   {% else %}

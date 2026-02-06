@@ -150,6 +150,13 @@
   font-size: $type-size-6;
 }
 
+.data-gallery__description {
+  margin-top: 0.35em;
+  margin-bottom: 0.75em;
+  color: mix(#fff, $text-color, 35%);
+  font-size: $type-size-6;
+}
+
 .teaching-section {
   margin: 0 0 1.25em;
 }
