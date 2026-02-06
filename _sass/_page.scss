@@ -150,6 +150,22 @@
   font-size: $type-size-6;
 }
 
+.teaching-section {
+  margin: 0 0 1.25em;
+}
+
+.teaching-title {
+  font-family: $sans-serif-narrow;
+  font-size: $type-size-5;
+  margin-bottom: 0.35em;
+}
+
+.teaching-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
 .page__hero {
   position: relative;
   margin-bottom: 2em;
