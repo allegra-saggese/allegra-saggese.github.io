@@ -1,5 +1,5 @@
 - title: "Estimating the informal economy in California"
-This work inteded
+  description: "This work is an attempt at measuring the size of the informal economy in California through comparing taxable personal consumption expenditure data from the household level to the actual amount of collected taxes. This is a first attempt to model the size of California's informal economy based on the VAT-based measurements of tax evasion in Europe (Pappada \& Rogoff 2023)."
   items:
     - image_path: /images/data-informal/tax-rates-pce.jpeg
       title: "Taxable share of personal consumption expenditure (PCE) vs. effective tax rate in CA"
