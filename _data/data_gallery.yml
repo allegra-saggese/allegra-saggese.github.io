@@ -1,5 +1,30 @@
-- title: "Economic Informality"
-  items: []
+- title: "Estimating the informal economy in California"
+This work inteded
+  items:
+    - image_path: /images/data-informal/tax-rates-pce.jpeg
+      title: "Taxable share of personal consumption expenditure (PCE) vs. effective tax rate in CA"
+      caption: "The last 20 years of data show an increase in the nominal share of spending at the household level subject to tax, with a fairly stable effective tax rate until 2018."
+      alt: "Line chart of share of taxable PCE and effective tax rate in CA over time"
+    - image_path: /images/data-informal/tax-map-1.jpeg
+      title: "Urban vs Rural"
+      caption: "Informality by location."
+      alt: "Bar chart comparing urban and rural informality"
+          - image_path: /images/data-informal/tax-map-2.jpeg
+      title: "Urban vs Rural"
+      caption: "Informality by location."
+      alt: "Bar chart comparing urban and rural informality"
+      - image_path: /images/data-informal/results-1.jpeg
+      title: "Urban vs Rural"
+      caption: "Informality by location."
+      alt: "Bar chart comparing urban and rural informality"
+          - image_path: /images/data-informal/results-2.jpeg
+      title: "Urban vs Rural"
+      caption: "Informality by location."
+      alt: "Bar chart comparing urban and rural informality"
 
 - title: "Female Labor Force"
-  items: []
+  items:
+    - image_path: /images/data/female-lfp-1.png
+      title: "LFP Over Time"
+      caption: "Participation rates by income group."
+      alt: "Line chart of female labor force participation"
