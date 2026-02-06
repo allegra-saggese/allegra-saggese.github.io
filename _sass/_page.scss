@@ -162,8 +162,9 @@
 
 .teaching-links {
   display: flex;
-  flex-direction: column;
-  gap: 0.25em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em 1.25em;
 }
 
 .page__hero {
