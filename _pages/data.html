@@ -7,8 +7,13 @@ author_profile: true
 
 {% include base_path %}
 
+<p>Selected data visualizations and project outputs. This page is a work in progress and will be updated regularly.</p>
 
-{% for post in site.data %}
-  {% include archive-single.html %}
+{% for section in site.data.data_gallery %}
+  <h2>{{ section.title }}</h2>
+  {% if section.items and section.items.size > 0 %}
+    {% include gallery gallery=section.items class="data-gallery" %}
+  {% else %}
+    <p class="data-gallery__placeholder">Charts coming soon.</p>
+  {% endif %}
 {% endfor %}
-

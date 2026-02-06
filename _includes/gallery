@@ -1,9 +1,20 @@
 {% include base_path %}
 
-{% if include.id %}
+{% if include.gallery %}
+  {% assign gallery = include.gallery %}
+{% elsif include.id %}
   {% assign gallery = page.[include.id] %}
 {% else %}
   {% assign gallery = page.gallery %}
+{% endif %}
+
+{% assign has_meta = false %}
+{% if gallery %}
+  {% for img in gallery %}
+    {% if img.title or img.caption %}
+      {% assign has_meta = true %}
+    {% endif %}
+  {% endfor %}
 {% endif %}
 
 {% if gallery.size == 2 %}
@@ -14,17 +25,69 @@
   {% assign gallery_layout = '' %}
 {% endif %}
 
-<figure class="{{ gallery_layout }} {{ include.class }}">
-  {% for img in gallery %}
-    {% if img.url %}
-      <a href=
-        {% if img.url contains "://" %}
-          "{{ img.url }}"
+{% if has_meta %}
+  <div class="gallery gallery--grid{% if gallery_layout %} gallery--{{ gallery_layout }}{% endif %} {{ include.class }}">
+    {% for img in gallery %}
+      <figure class="gallery__item">
+        {% if img.url %}
+          <a href=
+            {% if img.url contains "://" %}
+              "{{ img.url }}"
+            {% else %}
+              "{{ img.url | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            {% if img.title %}title="{{ img.title }}"{% endif %}
+          >
+            <img src=
+              {% if img.image_path contains "://" %}
+                "{{ img.image_path }}"
+              {% else %}
+                "{{ img.image_path | prepend: "/images/" | prepend: base_path }}"
+              {% endif %}
+              alt="{% if img.alt %}{{ img.alt }}{% endif %}">
+          </a>
         {% else %}
-          "{{ img.url | prepend: "/images/" | prepend: base_path }}"
+          <img src=
+            {% if img.image_path contains "://" %}
+              "{{ img.image_path }}"
+            {% else %}
+              "{{ img.image_path | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            alt="{% if img.alt %}{{ img.alt }}{% endif %}">
         {% endif %}
-        {% if img.title %}title="{{ img.title }}"{% endif %}
-      >
+        {% if img.title or img.caption %}
+          <figcaption>
+            {% if img.title %}<div class="gallery__title">{{ img.title }}</div>{% endif %}
+            {% if img.caption %}<div class="gallery__caption">{{ img.caption }}</div>{% endif %}
+          </figcaption>
+        {% endif %}
+      </figure>
+    {% endfor %}
+    {% if include.caption %}
+      <div class="gallery__caption">{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</div>
+    {% endif %}
+  </div>
+{% else %}
+  <figure class="{{ gallery_layout }} {{ include.class }}">
+    {% for img in gallery %}
+      {% if img.url %}
+        <a href=
+          {% if img.url contains "://" %}
+            "{{ img.url }}"
+          {% else %}
+            "{{ img.url | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          {% if img.title %}title="{{ img.title }}"{% endif %}
+        >
+          <img src=
+            {% if img.image_path contains "://" %}
+              "{{ img.image_path }}"
+            {% else %}
+              "{{ img.image_path | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            alt="{% if img.alt %}{{ img.alt }}{% endif %}">
+        </a>
+      {% else %}
         <img src=
           {% if img.image_path contains "://" %}
             "{{ img.image_path }}"
@@ -32,18 +95,10 @@
             "{{ img.image_path | prepend: "/images/" | prepend: base_path }}"
           {% endif %}
           alt="{% if img.alt %}{{ img.alt }}{% endif %}">
-      </a>
-    {% else %}
-      <img src=
-        {% if img.image_path contains "://" %}
-          "{{ img.image_path }}"
-        {% else %}
-          "{{ img.image_path | prepend: "/images/" | prepend: base_path }}"
-        {% endif %}
-        alt="{% if img.alt %}{{ img.alt }}{% endif %}">
+      {% endif %}
+    {% endfor %}
+    {% if include.caption %}
+      <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
     {% endif %}
-  {% endfor %}
-  {% if include.caption %}
-    <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
-  {% endif %}
-</figure>
+  </figure>
+{% endif %}

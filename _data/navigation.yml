@@ -17,8 +17,8 @@ main:
   - title: "Public opinion"
     url: /talks/    
 
-#  - title: "Teaching"
-#    url: /teaching/    
+  - title: "Teaching"
+    url: /teaching/
     
 #  - title: "Portfolio"
 #    url: /portfolio/
