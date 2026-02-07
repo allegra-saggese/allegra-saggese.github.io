@@ -3,13 +3,13 @@ permalink: /
 layout: single
 author_profile: true
 recent_photos:
-  - image_path: /images/about-gallery/IMG_2013.JPG
+  - image_path: about-gallery/IMG_2013.JPG
     alt: "Recent photo 1"
-  - image_path: /images/about-gallery/IMG_4314.JPG
+  - image_path: about-gallery/IMG_4314.JPG
     alt: "Recent photo 2"
-  - image_path: /images/about-gallery/IMG_6528.JPG
+  - image_path: about-gallery/IMG_6528.JPG
     alt: "Recent photo 3"
-  - image_path: /images/about-gallery/IMG_7359.JPG
+  - image_path: about-gallery/IMG_7359.JPG
     alt: "Recent photo 4"
 redirect_from: 
   - /about/
