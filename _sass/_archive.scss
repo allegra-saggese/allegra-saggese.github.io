@@ -87,6 +87,11 @@
   color: mix(#fff, $text-color, 20%);
 }
 
+.archive__item-description p,
+.archive__item-description * {
+  font-size: inherit !important;
+}
+
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;
