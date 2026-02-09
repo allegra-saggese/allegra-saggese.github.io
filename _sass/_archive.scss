@@ -42,7 +42,8 @@
 .archive__item-title {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
-  font-size: $type-size-5;
+  font-size: $type-size-5 !important;
+  font-weight: 600;
 
   a + a {
     opacity: 0.5;
@@ -81,8 +82,8 @@
 
 .archive__item-description {
   margin-top: 0;
-  font-size: $type-size-5;
-  font-weight: normal;
+  font-size: $type-size-5 !important;
+  font-weight: 400;
   color: mix(#fff, $text-color, 20%);
 }
 
