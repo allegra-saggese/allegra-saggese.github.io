@@ -18,9 +18,3 @@
       caption: "Looking at the change in the normalized value over time of key aggregate values in CA's economy"
       alt: "Line chart comparing aggregate output, labor, spending, and unemployment rate over time (min-max normalized)"
 
-- title: "Female Labor Force"
-  items:
-    - image_path: /images/data/female-lfp-1.png
-      title: "LFP Over Time"
-      caption: "Participation rates by income group."
-      alt: "Line chart of female labor force participation"
