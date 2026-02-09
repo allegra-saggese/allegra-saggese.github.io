@@ -28,5 +28,5 @@ redirect_from:
 <p>Find my CV <a href="/files/2026-02-Saggese-CV.pdf">here</a>.</p>
 </div>
 
-### A few recent photos
+### I take photos on digital (Canon EOS1200D) and film (Nikon N8008, Pentax K1000)
 {% include gallery gallery=page.recent_photos class="about-gallery" %}
