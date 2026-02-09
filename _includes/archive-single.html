@@ -10,7 +10,7 @@
 
     <!-- Description -->
     {% if post.excerpt %}
-      <p class="archive__item-description" itemprop="description">{{ post.excerpt | markdownify }}</p>
+      <div class="archive__item-description" itemprop="description">{{ post.excerpt | markdownify }}</div>
     {% endif %}
 
     <!-- Download Links -->
