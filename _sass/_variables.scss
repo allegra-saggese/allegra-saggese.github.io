@@ -55,11 +55,11 @@ $sidebar-link-max-width     : 250px;
    Colors
    ========================================================================== */
 
-$bright-orange            : #FF9F1C; /* Default for download links */
+$bright-orange            : #A64E4E; /* Default for download links */
 $vibrant-red              : #E71D36; /* Hover for download links */
-$teal                     : #2EC4B6; /* Hover for navbar */
+$teal                     : #00916E; /* Hover for navbar */
 $dark-navy                : #011627; /* Default for navbar and text */
-$off-white                : #FDFFFC; /* Background */
+$off-white                : #F9F6F0; /* Background */
 
 
 /* Navbar colors */
@@ -77,8 +77,8 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-$body-color                 : #fff;
-$background-color           : #fff;
+$body-color                 : $off-white;
+$background-color           : $off-white;
 $code-background-color      : #fafafa;
 $code-background-color-dark : $light-gray;
 $text-color                 : $dark-gray;
