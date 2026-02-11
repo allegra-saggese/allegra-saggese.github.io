@@ -2,10 +2,93 @@
 **Academic Pages is a Github Pages template for academic websites.**
 
 ADAPTED VERSION - KEY CHANGES INCLUDE 
-(1) TITLES OF PAGES - I.E TALKS > PUBLIC OPINION and PUBLICATIONS > RESEARCH 
-(2) FONT - downloaded from google
-(3) LAYOUT of publications
-(4) NO RMD GENERATION FOR EACH PUBLICATION
+
+## Customized from Academic Pages Template
+
+Baseline used for comparison: initial import commit on `2025-01-25` (`e5ced30`), then all template-level differences tracked up to current `master`.
+
+### 1) Typography and visual system
+- Replaced template font stack with Google Fonts, primarily **Poppins** (`/_includes/head.html`, `/_sass/_variables.scss`).
+- Added Google Fonts stylesheet import in head for `Poppins` and `Lato` (`/_includes/head.html`).
+- Reduced base doc font size (`16` -> `15`) and tuned type scale sizes (`/_sass/_variables.scss`).
+- Set global/header/caption font families to Poppins (`/_sass/_variables.scss`).
+- Increased right sidebar widths for content breathing room (`/_sass/_variables.scss`).
+
+### 2) Color palette and link behavior
+- Introduced custom palette variables:
+  - `bright-orange` (`#FF9F1C`)
+  - `vibrant-red` (`#E71D36`)
+  - `teal` (`#2EC4B6`)
+  - `dark-navy` (`#011627`)
+  - `off-white` (`#FDFFFC`)
+  (`/_sass/_variables.scss`)
+- Overrode link colors to orange/red pair and masthead colors to navy/teal (`/_sass/_variables.scss`).
+- Added explicit underline + hover color behavior to links (`/_sass/_base.scss`).
+- Recolored navigation accents, borders, hover states, and archive taxonomy separators using custom palette (`/_sass/_navigation.scss`).
+
+### 3) Header, favicon, and branding details
+- Added custom favicon references (`favicon-slug.ico`, `images/samslug.png`) in head include (`/_includes/head.html`).
+- Added custom favicon assets in repo root and images (`/favicon-slug.ico`, `/favicon.ico`, `/images/samslug.png`).
+
+### 4) Layout-level template changes
+- Removed site footer block from default layout (`/_layouts/default.html`).
+- Deleted stock footer include entirely (`/_includes/footer.html`).
+- Cleared custom footer snippet content (`/_includes/footer/custom.html`).
+- Added `hide_title` support in archive layout to optionally suppress page title rendering (`/_layouts/archive.html`).
+- Reworked single-page publication presentation with dedicated title/description/download sections (`/_layouts/single.html`).
+
+### 5) Publications/archive component redesign
+- Replaced stock `archive-single` behavior with simplified item cards (`/_includes/archive-single.html`):
+  - no teaser thumbnail rendering
+  - no permalink icon/read-time block
+  - non-clickable title text
+  - excerpt shown as styled description block
+  - download links shown in a compact action row
+- Added archive styles for:
+  - tighter title sizing/weight
+  - styled description text
+  - reusable action link row
+  - full-width list alignment with reduced side padding
+  (`/_sass/_archive.scss`)
+
+### 6) Gallery system customization
+- Expanded gallery include to support `gallery=` input directly (in addition to page-scoped gallery IDs) (`/_includes/gallery`).
+- Added metadata-aware rendering mode:
+  - auto-switches to grid card layout when any item has `title`/`caption`
+  - outputs `figure/figcaption` per image with title/caption blocks
+  (`/_includes/gallery`)
+- Added support for absolute image paths beginning with `/` (important for reusable galleries and data galleries) (`/_includes/gallery`).
+- Preserved fallback legacy rendering for image-only galleries (`/_includes/gallery`).
+- Introduced structured data gallery source file (`/_data/data_gallery.yml`) with section titles/descriptions and item metadata.
+- Added gallery-specific style system (`/_sass/_page.scss`):
+  - `.gallery--grid`, `.gallery__item`, `.gallery__title`, `.gallery__caption`
+  - `.data-gallery` responsive sizing rules
+  - `.about-gallery` horizontal strip behavior
+  - placeholder/description helper styles
+
+### 7) Navigation and information architecture changes
+- Renamed top-level nav labels (`/_data/navigation.yml`):
+  - `Publications` -> `Research`
+  - `Talks` -> `Public opinion`
+  - `Teaching` -> `Learning`
+- Added new `Data` tab and page (`/_data/navigation.yml`, `/_pages/data.html`).
+- Disabled several default template links (Portfolio, Blog Posts, CV, Guide) in nav (`/_data/navigation.yml`).
+- Replaced stock About page flow with homepage-first profile page (`/_pages/index.md`) and about redirects.
+
+### 8) Page-level component styling additions
+- Added custom teaching section styles and link-row layout for resource blocks (`/_sass/_page.scss`).
+- Added `home-intro` sizing for homepage intro paragraphs (`/_sass/_page.scss`).
+- Reduced hero title size for a cleaner archive/single heading scale (`/_sass/_page.scss`).
+- Updated sidebar portrait treatment:
+  - circular -> square image
+  - updated border/padding
+  - larger sidebar body text
+  (`/_sass/_sidebar.scss`)
+
+### 9) Template configuration behavior changes
+- Updated publication category groups and labels to project-specific taxonomy (`/_config.yml`).
+- Enabled read-more behavior for excerpts (`read_more: "enabled"`) (`/_config.yml`).
+- Updated repository/site metadata and sidebar author profile defaults to project values (`/_config.yml`).
 
 
 
