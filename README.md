@@ -90,6 +90,95 @@ Baseline used for comparison: initial import commit on `2025-01-25` (`e5ced30`),
 - Enabled read-more behavior for excerpts (`read_more: "enabled"`) (`/_config.yml`).
 - Updated repository/site metadata and sidebar author profile defaults to project values (`/_config.yml`).
 
+## Maintenance Notes (for future updates)
+
+### 1) Update the CV
+1. Add the new CV PDF to `/files/` (example naming convention: `YYYY-MM-Saggese-CV.pdf`).
+1. Update the homepage CV link in `/_pages/index.md`.
+1. Search for old CV filenames and replace any remaining references:
+   ```bash
+   rg "Saggese-CV|CV.pdf|2026-02-Saggese-CV" _pages files README.md
+   ```
+1. Optional: if you want a dedicated top-nav CV page again, uncomment the CV item in `/_data/navigation.yml`.
+
+### 2) Add a new WIP paper
+1. Upload the paper PDF to `/files/`.
+1. Create a new file in `/_publications/` (example: `2026-my-wip-paper`).
+1. Use this front matter template and edit values:
+   ```yaml
+   ---
+   title: "Paper title"
+   collection: publications
+   category: drafts
+   excerpt: "1-3 sentence summary shown on the Research page."
+   date: 2026-02-11
+   paperurl: "http://allegra-saggese.github.io/files/your-paper-file.pdf"
+   ---
+   ```
+1. Valid category values are controlled in `/_config.yml` under `publication_category`:
+   `drafts`, `manuscripts`, `publications`, `other`.
+
+### 3) Add, drop, or swap photos in the homepage gallery
+1. Store images in `/images/about-gallery/`.
+1. Edit the `recent_photos` list in `/_pages/index.md`.
+1. Add a photo by adding a new item:
+   ```yaml
+   - image_path: about-gallery/your-image.jpg
+     alt: "Short accessibility description"
+   ```
+1. Drop a photo by deleting that list item.
+1. Swap a photo by changing only the `image_path` value.
+1. If a filename has spaces or parentheses, keep it quoted in YAML.
+
+### 4) Add a new data project to the Data page
+1. Add project images to `/images/data-<project-slug>/`.
+1. Open `/_data/data_gallery.yml` and append a new top-level section:
+   ```yaml
+   - title: "Project title"
+     description: "Short project description."
+     items:
+       - image_path: /images/data-project-slug/figure-1.png
+         title: "Chart title"
+         caption: "1-line chart note."
+         alt: "Accessibility description of chart"
+   ```
+1. Repeat `items` entries for each chart/figure.
+1. The `/data/` page updates automatically because `/_pages/data.html` loops through `site.data.data_gallery`.
+
+## Next Steps: ggplot and Shiny-style interactive graphics
+
+1. Decide the interaction level per figure before implementation.
+   Option A: static image export from ggplot (fastest and simplest).
+   Option B: interactive htmlwidget (plotly/leaflet/dygraphs) embedded on page.
+   Option C: full Shiny app embedded via iframe.
+1. Keep in mind: GitHub Pages is static hosting, so Shiny cannot run directly inside this repo.
+1. For full Shiny compatibility, host apps on `shinyapps.io` or Posit Connect, then embed with iframe.
+1. For htmlwidgets, render a standalone HTML file from R and place it in `/files/interactive/`, then embed it on a page.
+1. Create a dedicated page (for example `/_pages/interactive.html`) so interactive graphics do not overload the main Data page.
+1. Add a lightweight pilot first:
+   one ggplot figure exported as PNG + one interactive version of the same chart.
+1. If the pilot works well, standardize a workflow:
+   `R/` scripts for plot generation, `/files/interactive/` for widget outputs, `/images/data-*` for static fallbacks.
+
+### Example embed snippets
+HTML widget saved as a local file:
+```html
+<iframe src="{{ '/files/interactive/tax-dashboard.html' | relative_url }}"
+        width="100%"
+        height="700"
+        style="border:0;"
+        loading="lazy"></iframe>
+```
+
+Externally hosted Shiny app:
+```html
+<iframe src="https://your-account.shinyapps.io/your-app/"
+        width="100%"
+        height="750"
+        style="border:0;"
+        loading="lazy"></iframe>
+```
+
 
 
 ![Academic Pages template example](images/homepage.png "Academic Pages template example")
