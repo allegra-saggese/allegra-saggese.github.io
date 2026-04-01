@@ -1,5 +1,26 @@
+- title: "Gender norms and joint household labor choices"
+  description: 'Early stage exploration of US household labor data. THe goal is to understand why there is a persistent gap in the time spent working (and subsequently earned income) between men and women. This gap seems to experience a kink around the 80th percentile where women slow or stop working. These individuals, sometimes known as tradwives, seem to only exist when the household is unconstrained. Further investigation is needed to test whether, when households jointly optimize their decisions to work outside the home, there is a male gender norm - such that the household gains utility from a male spouse working more than the female spouse.'
+  items:
+    - image_path: /images/data-female-lab/dual-earner-share-year-quintile.png
+      title: "Earnings share by household type"
+      caption: " ACS household composition and share of total households by quintile."
+      alt: "US ACS data on household composition"
+    - image_path: /images/data-female-lab/working-share-women-quintile.png
+      title: "Share of employed female spouses"
+      caption: "Share of females in married couple households who work by income quintile over time"
+    - image_path: /images/data-female-lab/flfpr-by-county-votespread-pres-election-years.png
+      title: "Female labor force participation rate (LFPR)"
+      caption: "For previous three presidential years, I plot female LFPR against log(median household income) at the county level."
+      alt: "Fitted line shows the relationship between log(median household income) and female LFPR. Dotted lines disaggregate top and bottom quintile."
+    - image_path: /images/data-female-lab/flfpr-by-county-color.png
+      title: "Change in female LFPR (2012-2022)"
+      caption: "Change in female labor force participation by log(median household income). Color indicates the vote margin in 2020 presidential election for the county."
+
+
+
+
 - title: "Estimating the informal economy in California"
-  description: 'This work is an attempt at measuring the size of the informal economy in California through comparing taxable personal consumption expenditure data from the household level to the actual amount of collected taxes. This is a first attempt to model the size of California''s informal economy based on the VAT-based measurements of tax evasion in Europe (Pappada & Rogoff 2023).'
+  description: 'This work is a rough estimate of the informal economy in California. By comparing taxable PCE data from household survey data at the effective local tax rate to the reported amount of tax revenue by the state, it is a the first attempt to model California''s informal economy. The method is based on the VAT-based measurements of tax evasion in Europe (Pappada & Rogoff 2023).'
   items:
     - image_path: /images/data-informal/tax-map-1.jpeg
       title: "Tax revenue by county"
