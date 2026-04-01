@@ -1,18 +1,18 @@
 - title: "Gender norms and joint household labor choices"
   description: 'Early stage exploration of US household labor data. THe goal is to understand why there is a persistent gap in the time spent working (and subsequently earned income) between men and women. This gap seems to experience a kink around the 80th percentile where women slow or stop working. These individuals, sometimes known as tradwives, seem to only exist when the household is unconstrained. Further investigation is needed to test whether, when households jointly optimize their decisions to work outside the home, there is a male gender norm - such that the household gains utility from a male spouse working more than the female spouse.'
   items:
-    - image_path: /images/data-female-lab/dual-earner-share-year-quintile.jpeg
+    - image_path: /images/data-female-lab/dual-earner-share-year-quintile.png
       title: "Earnings share by household type"
       caption: " ACS household composition and share of total households by quintile."
       alt: "US ACS data on household composition"
-    - image_path: /images/data-female-lab/working-share-women-quintile.jpeg
+    - image_path: /images/data-female-lab/working-share-women-quintile.png
       title: "Share of employed female spouses"
       caption: "Share of females in married couple households who work by income quintile over time"
-    - image_path: /images/data-female-lab/flfpr-by-county-votespread-pres-election-years.jpeg
+    - image_path: /images/data-female-lab/flfpr-by-county-votespread-pres-election-years.png
       title: "Female labor force participation rate (LFPR)"
       caption: "For previous three presidential years, I plot female LFPR against log(median household income) at the county level."
       alt: "Fitted line shows the relationship between log(median household income) and female LFPR. Dotted lines disaggregate top and bottom quintile."
-    - image_path: /images/data-female-lab/flfpr-by-county-color.jpeg
+    - image_path: /images/data-female-lab/flfpr-by-county-color.png
       title: "Change in female LFPR (2012-2022)"
       caption: "Change in female labor force participation by log(median household income). Color indicates the vote margin in 2020 presidential election for the county."
 
