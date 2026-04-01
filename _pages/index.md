@@ -25,7 +25,7 @@ redirect_from:
 
 <p>I study how firms in developing countries respond to macro shocks, particularly climate change and trade policy.</p>
 
-<p>Find my CV <a href="/files/2026-02-Saggese-CV.pdf">here</a>.</p>
+<p>Find my CV <a href="/files/03-2026-CV-Saggese.pdf">here</a>.</p>
 </div>
 
 ### I take photos on digital (Canon EOS1200D) and film (Nikon N8008, Pentax K1000)
