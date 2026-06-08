@@ -21,11 +21,11 @@ redirect_from:
 ---
 
 <div class="home-intro">
-<p>Current PhD student in the Economics Department at UC Santa Cruz. Previously at the International Growth Center and the Department of Economics at LSE as a Policy Economist and Research Assistant. Before, I was an Economist at McKinsey & Company Sustainability. I hold an MSc in Environmental Economics and Climate Change from the LSE and a BS in Environmental Economics and Policy and BA in Rhetoric from UC Berkeley.</p>
+<p>Current PhD student in the Economics Department at UC Santa Cruz. Previously a Policy Economist at the <a href="https://www.theigc.org/people/allegra-saggese">International Growth Center</a> and Research Assistant in the <a href="https://www.lse.ac.uk/economics">Department of Economics at LSE</a>. From 2019-2021, I worked at <a href="https://www.mckinsey.com/capabilities/sustainability/how-we-help-clients">McKinsey & Company (formerly Vivid Economics)</a>. I hold an MSc in <a href="https://www.lse.ac.uk/geography-and-environment">Environmental Economics and Climate Change</a> from the LSE and a BS in Environmental Economics and Policy and BA in Rhetoric from UC Berkeley.</p>
 
-<p>I study how firms in developing countries organize, and how workers respond to macro shocks, particularly climate change and commodity price changes.</p>
+<p>I study firms, mines and environmental issues in developing economics.</p>
 
-<p>Find my CV <a href="/files/03-2026-CV-Saggese.pdf">here</a>.</p>
+<p>Find my CV <a href="/files/06-26-saggese-CV.pdf">here</a>.</p>
 </div>
 
 ### I take photos on digital (Canon EOS1200D) and film (Nikon N8008, Pentax K1000)
