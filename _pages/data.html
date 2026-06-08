@@ -15,6 +15,19 @@ hide_title: true
   .data-github-link:hover {
     color: #C0390C;
   }
+  .data-gallery__featured {
+    margin: 0 0 1.5em;
+  }
+  .data-gallery__featured img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .data-gallery__featured figcaption {
+    margin-top: 0.5em;
+  }
+  .data-gallery--thumbs.gallery--grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 </style>
 
 <p>Data visualizations from work-in-progress research. Source code available on <a href="https://github.com/allegra-saggese" class="data-github-link">GitHub</a> or via request.</p>
@@ -24,9 +37,18 @@ hide_title: true
   {% if section.description %}
     <p class="data-gallery__description">{{ section.description | markdownify | remove: "<p>" | remove: "</p>" }}</p>
   {% endif %}
+  {% if section.featured %}
+    <figure class="data-gallery__featured">
+      <img src="{{ section.featured.image_path | prepend: base_path }}" alt="{{ section.featured.alt }}">
+      <figcaption>
+        {% if section.featured.title %}<div class="gallery__title">{{ section.featured.title }}</div>{% endif %}
+        {% if section.featured.caption %}<div class="gallery__caption">{{ section.featured.caption }}</div>{% endif %}
+      </figcaption>
+    </figure>
+  {% endif %}
   {% if section.items and section.items.size > 0 %}
-    {% include gallery gallery=section.items class="data-gallery" %}
-  {% else %}
+    {% include gallery gallery=section.items class="data-gallery data-gallery--thumbs" %}
+  {% elsif section.featured == nil %}
     <p class="data-gallery__placeholder">Charts coming soon.</p>
   {% endif %}
 {% endfor %}

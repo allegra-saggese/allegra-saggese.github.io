@@ -1,13 +1,15 @@
 - title: "Gender norms and joint household labor choices"
-  description: 'Early stage exploration of US household labor data. THe goal is to understand why there is a persistent gap in the time spent working (and subsequently earned income) between men and women. This gap seems to experience a kink around the 80th percentile where women slow or stop working. These individuals, sometimes known as tradwives, seem to only exist when the household is unconstrained. Further investigation is needed to test whether, when households jointly optimize their decisions to work outside the home, there is a male gender norm - such that the household gains utility from a male spouse working more than the female spouse.'
+  description: 'Analysis of the income elasticity and potential bunching effects of the breadwinner norm, documented by Bertrand et al (2015). I study the gap in both labor hours and income between heterosexual married households. Early analysis suggests when household income is no longer a binding constraint, there are significant reductions of female work hours.'
+  featured:
+    image_path: /images/data-female-lab/working-share-women-quintile.png
+    title: "Share of employed female spouses"
+    caption: "Share of females in married couple households who work by income quintile over time"
+    alt: "Share of females in married couple households who work, by income quintile, over time"
   items:
     - image_path: /images/data-female-lab/dual-earner-share-year-quintile.png
       title: "Earnings share by household type"
       caption: " ACS household composition and share of total households by quintile."
       alt: "US ACS data on household composition"
-    - image_path: /images/data-female-lab/working-share-women-quintile.png
-      title: "Share of employed female spouses"
-      caption: "Share of females in married couple households who work by income quintile over time"
     - image_path: /images/data-female-lab/flfpr-by-county-votespread-pres-election-years.png
       title: "Female labor force participation rate (LFPR)"
       caption: "For previous three presidential years, I plot female LFPR against log(median household income) at the county level."
