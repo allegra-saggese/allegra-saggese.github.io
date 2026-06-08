@@ -21,9 +21,9 @@ redirect_from:
 ---
 
 <div class="home-intro">
-<p>Current PhD student in the Economics Department at UC Santa Cruz. Previously a Policy Economist at the <a href="https://www.theigc.org/people/allegra-saggese">International Growth Center</a> and Research Assistant in the <a href="https://www.lse.ac.uk/economics">Department of Economics at LSE</a>. From 2019-2021, I worked at <a href="https://www.mckinsey.com/capabilities/sustainability/how-we-help-clients">McKinsey & Company (formerly Vivid Economics)</a>. I hold an MSc in <a href="https://www.lse.ac.uk/geography-and-environment">Environmental Economics and Climate Change</a> from the LSE and a BS in Environmental Economics and Policy and BA in Rhetoric from UC Berkeley.</p>
+<p>Current PhD student in the Economics Department at <a href="https://economics.ucsc.edu/">UC Santa Cruz</a>. Previously a Policy Economist at the <a href="https://www.theigc.org/people/allegra-saggese">International Growth Center</a> and Research Assistant in the <a href="https://www.lse.ac.uk/economics">Department of Economics at LSE</a>. From 2019-2021, I worked at <a href="https://www.mckinsey.com/capabilities/sustainability/how-we-help-clients">McKinsey & Company</a>. I hold an MSc in <a href="https://www.lse.ac.uk/geography-and-environment">Environmental Economics and Climate Change</a> from the LSE and a BS in Environmental Economics and Policy and BA in Rhetoric from UC Berkeley.</p>
 
-<p>I study firms, mines and environmental issues in developing economics.</p>
+<p>I study firms, mines and environmental issues in developing economies.</p>
 
 <p>Find my CV <a href="/files/06-26-saggese-CV.pdf">here</a>.</p>
 </div>

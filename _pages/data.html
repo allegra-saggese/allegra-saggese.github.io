@@ -8,7 +8,16 @@ hide_title: true
 
 {% include base_path %}
 
-<p>Data visualizations from work-in-progress research. Source code available on <a href="https://github.com/allegra-saggese">GitHub</a> or via request.</p>
+<style>
+  .data-github-link {
+    color: #E91E8C;
+  }
+  .data-github-link:hover {
+    color: #C0390C;
+  }
+</style>
+
+<p>Data visualizations from work-in-progress research. Source code available on <a href="https://github.com/allegra-saggese" class="data-github-link">GitHub</a> or via request.</p>
 
 {% for section in site.data.data_gallery %}
   <h2>{{ section.title }}</h2>
