@@ -25,10 +25,10 @@ redirect_from:
 
 <p>Find my CV <a href="/files/06-26-saggese-CV.pdf">here</a>.</p>
 
-<p>&rarr; <em><span style="color: #E91E8C;">New blog on green jobs out [June 2026]</span></em></p>
+<p>&rarr; <em><a href="https://www.theigc.org/blogs/green-jobs-climate-change-reshaping-work" style="color: #E91E8C;">New blog on green jobs out [June 2026]</a></em></p>
 </div>
 
 <div style="margin-top: 3em;"></div>
 
-### I take photos on digital (Canon EOS1200D) and film (Nikon N8008, Pentax K1000)
+<h3 style="font-weight: normal;">I take photos on digital (Canon EOS1200D) and film (Nikon N8008, Pentax K1000)</h3>
 {% include gallery gallery=page.recent_photos class="about-gallery" %}
