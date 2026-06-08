@@ -15,27 +15,3 @@
     - image_path: /images/data-female-lab/flfpr-by-county-color.png
       title: "Change in female LFPR (2012-2022)"
       caption: "Change in female labor force participation by log(median household income). Color indicates the vote margin in 2020 presidential election for the county."
-
-
-
-
-- title: "Estimating the informal economy in California"
-  description: 'This work is a rough estimate of the informal economy in California. By comparing taxable PCE data from household survey data at the effective local tax rate to the reported amount of tax revenue by the state, it is a the first attempt to model California''s informal economy. The method is based on the VAT-based measurements of tax evasion in Europe (Pappada & Rogoff 2023).'
-  items:
-    - image_path: /images/data-informal/tax-map-1.jpeg
-      title: "Tax revenue by county"
-      caption: " ACS-based estimate of household spending used to calculate county-level tax revenue."
-      alt: "Map of CA (2023) identifying the total tax revenue to be collected per county."
-    - image_path: /images/data-informal/tax-map-2.jpeg
-      title: "Tax rate by county"
-      caption: "County tax rates, CA (2023)"
-      alt: "Map of CA (2023) with effective county-level tax rates, where counties may have specific sales tax measures."
-    - image_path: /images/data-informal/results-1.jpeg
-      title: "Estimated vs. actual CA sales tax revenue (2005-2023)"
-      caption: "Actual sales tax revenue from FRED FED vs. the estimated amount of revenue derived from a PCE-based estimate"
-      alt: "Line chart 2005-2023 demonstrating the difference in estimated and actual tax revenue collection."
-    - image_path: /images/data-informal/results-2.jpeg
-      title: "Estimates (2005-2023)"
-      caption: "Looking at the change in the normalized value over time of key aggregate values in CA's economy"
-      alt: "Line chart comparing aggregate output, labor, spending, and unemployment rate over time (min-max normalized)"
-
