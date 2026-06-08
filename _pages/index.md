@@ -21,12 +21,14 @@ redirect_from:
 ---
 
 <div class="home-intro">
-<p>Current PhD student in the Economics Department at <a href="https://economics.ucsc.edu/">UC Santa Cruz</a>. Previously a Policy Economist at the <a href="https://www.theigc.org/people/allegra-saggese">International Growth Center</a> and Research Assistant in the <a href="https://www.lse.ac.uk/economics">Department of Economics at LSE</a>. From 2019-2021, I worked at <a href="https://www.mckinsey.com/capabilities/sustainability/how-we-help-clients">McKinsey & Company</a>. I hold an MSc in <a href="https://www.lse.ac.uk/geography-and-environment">Environmental Economics and Climate Change</a> from the LSE and a BS in Environmental Economics and Policy and BA in Rhetoric from UC Berkeley.</p>
-
-<p>I study firms, mines and environmental issues in developing economies.</p>
+<p>Welcome to my site. I am a current PhD student in the Economics Department at <a href="https://economics.ucsc.edu/">UC Santa Cruz</a>. Previously I was a Policy Economist at the <a href="https://www.theigc.org/people/allegra-saggese">International Growth Center</a> and Research Assistant in the <a href="https://www.lse.ac.uk/economics">Department of Economics at LSE</a>. From 2019-2021, I worked at <a href="https://www.mckinsey.com/capabilities/sustainability/how-we-help-clients">McKinsey & Company</a>. I hold an MSc in <a href="https://www.lse.ac.uk/geography-and-environment">Environmental Economics and Climate Change</a> from the LSE and a BS in Environmental Economics and Policy and BA in Rhetoric from UC Berkeley.</p>
 
 <p>Find my CV <a href="/files/06-26-saggese-CV.pdf">here</a>.</p>
+
+<p>&rarr; <em><span style="color: #E91E8C;">New blog on green jobs out [June 2026]</span></em></p>
 </div>
+
+<div style="margin-top: 3em;"></div>
 
 ### I take photos on digital (Canon EOS1200D) and film (Nikon N8008, Pentax K1000)
 {% include gallery gallery=page.recent_photos class="about-gallery" %}
