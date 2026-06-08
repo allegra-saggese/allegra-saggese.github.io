@@ -66,7 +66,7 @@
 .page__content {
 
   .archive__item-title {
-    margin-top: 1em;
+    margin-top: 0.5em;
     border-bottom: none;
   }
 }
@@ -80,8 +80,15 @@
   }
 }
 
+.archive__item-date {
+  margin: 0 0 0.25em;
+  font-size: $type-size-7;
+  color: mix(#fff, $text-color, 35%);
+}
+
 .archive__item-description {
   margin-top: 0;
+  margin-bottom: 0.25em;
   font-size: $type-size-5 !important;
   font-weight: 400;
   color: mix(#fff, $text-color, 20%);
@@ -89,6 +96,7 @@
 
 .archive__item-description p,
 .archive__item-description * {
+  margin-bottom: 0.3em;
   font-size: inherit !important;
 }
 

@@ -8,6 +8,11 @@
       {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
     </h2>
 
+    <!-- Date -->
+    {% if post.date %}
+      <p class="archive__item-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+    {% endif %}
+
     <!-- Description -->
     {% if post.excerpt %}
       <div class="archive__item-description" itemprop="description">{{ post.excerpt | markdownify }}</div>
