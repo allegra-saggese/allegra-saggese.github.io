@@ -1,0 +1,247 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \\documentclass[11pt,letterpaper]\{article\}\
+\\usepackage[lmargin=1in,rmargin=1in,bmargin=1in,tmargin=1in]\{geometry\}\
+\
+% -------------------\
+% Packages\
+% -------------------\
+\\usepackage\{\
+	amsmath,		% Math Environments\
+	enumerate,	    % Enumerate Environments\
+	float,			% Force Placements\
+	graphicx,		% Use Images\
+	hyperref,		% Pointers\
+	lastpage,		% Reference Lastpage\
+	multicol,		% Use Multi-columns\
+	multirow,		% Use Multi-rows\
+	titling			% Title Placement\
+\}\
+\
+\
+% -------------------\
+% Hyperref\
+% -------------------\
+\\hypersetup\{\
+	colorlinks = true,\
+  	linkcolor  = blue,\
+  	urlcolor   = blue\
+\}\
+\\renewcommand\\UrlFont\{\\normalfont\}\
+\
+\
+% -------------------\
+% Font\
+% -------------------\
+\\usepackage[T1]\{fontenc\}\
+\\usepackage\{charter\}\
+\
+\
+% -------------------\
+% Commands\
+% -------------------\
+\\newcommand\{\\lefthead\}[2]\{\\noindent\\textbf\{#1\}\\hfill\\\\[#2]\}\
+\
+\
+% -------------------\
+% Course Information \'97 EDIT THIS BLOCK ONLY\
+% -------------------\
+\
+% Instructor\
+\\newcommand\{\\instructor\}\{FULL NAME\}\
+% Instructor Office\
+\\newcommand\{\\office\}\{OFFICE LOCATION\}\
+% Instructor Email\
+\\newcommand\{\\email\}\{EMAIL@SCHOOL.edu\}\
+% Instructor Website\
+\\newcommand\{\\website\}\{see Coursera\}\
+% Course Subject Abbreviation\
+\\newcommand\{\\coursecode\}\{ECONXXXX\}\
+% Course Title\
+\\newcommand\{\\coursetitle\}\{COURSE TITLE\}\
+% Season\
+\\newcommand\{\\semester\}\{QUARTER, YEAR-YY\}\
+% Office Hours\
+\\newcommand\{\\officehours\}\{TIME RANGE\}\
+% Course Supervisor\
+\\newcommand\{\\faculty\}\{INSTRUCTOR LAST NAME\}\
+\
+% Section 1\
+\\newcommand\{\\sectionnameone\}\{DISC 0XA\}\
+\\newcommand\{\\sectiondateone\}\{DAY\}\
+\\newcommand\{\\sectiontimeone\}\{HH:MM-HH:MM\}\
+\\newcommand\{\\sectionroomone\}\{ROOM\}\
+\
+% Section 2\
+\\newcommand\{\\sectionnametwo\}\{DISC 0XB\}\
+\\newcommand\{\\sectiondatetwo\}\{DAY\}\
+\\newcommand\{\\sectiontimetwo\}\{HH:MM-HH:MM\}\
+\\newcommand\{\\sectionroomtwo\}\{ROOM\}\
+\
+% University-specific resources\
+\\newcommand\{\\university\}\{YOUR UNIVERSITY\}\
+\\newcommand\{\\learningsupportname\}\{Learning Support Services center\}\
+\\newcommand\{\\learningsupporturl\}\{https://learningsupport.ucsc.edu/\}\
+\\newcommand\{\\advisingname\}\{undergraduate advising\}\
+\\newcommand\{\\advisingurl\}\{https://advising.ucsc.edu/\}\
+\\newcommand\{\\deptadvisingname\}\{the Economics department advising\}\
+\\newcommand\{\\deptadvisingurl\}\{https://economics.ucsc.edu/advising/undergraduate-advising/\}\
+\\newcommand\{\\accessibilityoffice\}\{DRC\}\
+\\newcommand\{\\accessibilityphone\}\{831-459-2089\}\
+\\newcommand\{\\accessibilityemail\}\{drc@ucsc.edu\}\
+\
+\
+% -------------------\
+% Header & Footer\
+% -------------------\
+\\usepackage\{fancyhdr\}\
+\
+\\fancypagestyle\{pages\}\{\
+	%Headers\
+	\\fancyhead[L]\{\}\
+	\\fancyhead[C]\{\}\
+	\\fancyhead[R]\{\}\
+\\renewcommand\{\\headrulewidth\}\{0pt\}\
+	%Footers\
+	\\fancyfoot[L]\{\}\
+	\\fancyfoot[C]\{\}\
+	\\fancyfoot[R]\{\\thepage \\,of \\pageref*\{LastPage\}\}\
+\\renewcommand\{\\footrulewidth\}\{0.0pt\}\
+\}\
+\\headheight=0pt\
+\\footskip=20pt\
+\
+\\pagestyle\{pages\}\
+\
+\
+% -------------------\
+% Title\
+% -------------------\
+\\title\{\\Large\\bfseries \\coursecode: \\coursetitle \\\\[0.1cm] \\semester\}\
+\\author\{\}\
+\\date\{\}\
+\\setlength\{\\droptitle\}\{-2cm\}\
+\
+\
+% -------------------\
+% Content\
+% -------------------\
+\\begin\{document\}\
+\\maketitle\
+\\thispagestyle\{empty\}\
+\\vspace\{-2cm\}\
+\
+\
+% Introduction\
+\\lefthead\{Graduate instructor information\}\{0.3cm\}\
+\\indent \\emph\{Name:\} \\instructor \\\\\
+\\indent \\emph\{Office:\} \\office \\\\\
+\\indent \\emph\{Email:\} \\email \\\\\
+\\indent \\emph\{Office Hours:\} \\officehours  \\\\\
+\\indent \\emph\{Course Instructor:\} \\faculty  \\\\[0.3cm]\
+\
+\
+% Class Information\
+\\lefthead\{Class information\}\{0.3cm\}\
+\\indent \\emph\{Section 1:\} \\sectionnameone \\,--- \\sectiondateone, \\sectiontimeone, \\sectionroomone \\\\\
+\\indent \\emph\{Section 2:\} \\sectionnametwo \\,--- \\sectiondatetwo, \\sectiontimetwo, \\sectionroomtwo \\\\[0.3cm]\
+\
+\
+% Course Objectives\
+\\lefthead\{Course objectives\}\{0.3cm\}\
+One hour a week discussion section to supplement the lectures of \\coursecode. This course will deep dive and review the topics covered in lectures and course materials, as well as offering assistance on problem sets and preparation for exams. The discussion section is an opportunity for engaging with your peers. The format differs from lecture and no new material is presented. Students can:    \
+\\begin\{itemize\}\
+        \\item Come prepared with questions you have tried or are stuck on from the problem sets or exams to review in more detail. \
+        \\item Practice applying mathematics to the economic theories covered in class. \
+        \\item Learn to [self] assess the mathematical solutions and concepts to economic problems. \
+        \\item Engage in classroom discussion with peers on the theories of intermediate microeconomics.\
+        \\item Ask questions related to real world applications, new research or context. \
+        \
+        \\end\{itemize\} \\vspace\{0.3cm\}\
+\
+\
+% Principles of community \
+\\lefthead\{Principles of community\}\{0.3cm\}\
+In our discussion, I expect us to engage in open dialogue to ultimately deepen our understanding the topics of this course. I encourage everyone to have patience and courage when speaking in class, and always respect for others. An important aim of our classroom interactions will be for us to increase our facility to discuss economic theory and its applications, where reasonable people may hold diverse perspectives as there is both evolving evidence and disagreement within microeconomics. I ask all members of this class to:\
+\\begin\{itemize\}\
+    \\item Be open to and interested in the views of others.\
+    \\item Consider the possibility that your views may change over the course of the term.\
+    \\item Listen to each other\'92s opinions and communicate in a respectful manner.\
+    \\item Ground your comments in the texts we are studying. Referring frequently to the course notes, readings and textbooks as the focus of questions and comments is an effective way to ensure respectful and evidence-based discussion.\
+\\end\{itemize\} \
+\\noindent \\\\[-0.5cm]\
+\
+\
+% Attendance - update to reflect your attendance policy \
+\\lefthead\{Class attendance\}\{0.3cm\}\
+Participation is not graded and discussion sections are not mandatory. Lecture attendance is critical to course success. Discussions are supplemental, and will provide all students an opportunity to gain a mastery of the material. If you are unable to attend your assigned discussion section, you are welcome to attend the other offered section (\\sectionnameone\\ or \\sectionnametwo, whichever you are not enrolled in), space permitting. Please try to attend the discussion from the start time of the course, as coming late to class may disrupt other students. \\\\\
+\
+ \
+% Homeworks & Labs\
+\\lefthead\{Homework\}\{0.3cm\}\
+\\noindent \\noindent The purpose of homework is to solve models and apply economic concepts to real cases. Completing all the homework problems is the best way to practice and prepare for quizzes and exams. I can review problems and assist on homework problems during section time and office hours.\\footnote\{ Late submissions will not be accepted. If you need an extension, please contact the course instructor in a timely fashion to discuss. \}\\\\[0.3cm]\
+\
+% Math Help\
+\\lefthead\{Math \\& other help\}\{0.3cm\}\
+\\noindent If you need help, there are many resources available to help you. If you are struggling, please attend my office hours or send an email as soon as possible. Do not wait to bring issues, course related or otherwise, to my attention. I plan to respond to emails related to the course within 48 hours.  If you cannot attend office hours, send me an email, at \\email, to arrange a different time for us to meet.\\\\[0.3cm]\
+\
+\\noindent Other resources are available, including the \\learningsupportname, \\url\{\\learningsupporturl\} where undergraduate students can build a strong foundation for success and cultivate a sense of belonging at \\university's Community of Learners. \\\\[0.3cm]\
+\
+% Advising and economics\
+\\lefthead\{The economics department and you\}\{0.3cm\}\
+If you need help on planning your coursework for the year, or selecting courses for your major, you can reach out to \\advisingname\\ at \\url\{\\advisingurl\}. \\deptadvisingname\\ also offers at \\url\{\\deptadvisingurl\} for economics majors or those interested in majoring in economics. The best way to succeed in the department is to utilize the resources available to you, make connections with graduate student instructors, professors and your colleagues in the course. \\\\[0.1cm]\
+\
+\\noindent If you are unsure about majoring in economics or a similar field, I am happy to speak to you about your interest in economics. There can be specific challenges for students from underrepresented backgrounds, including race, gender and class. Stansbury and Shultz (2023)\\footnote\{Stansbury, Anna, and Robert Schultz. 2023. "The Economics Profession's Socioeconomic Diversity Problem." \\textit\{Journal of Economic Perspectives\} 37 (4): 207\'9630.\
+DOI: 10.1257/jep.37.4.207\} document that students in Economics PhD programs are the \\textit\{least socioeconomically diverse\} of all doctoral degrees, and the gap is widening. This should not discourage you. As a teaching assistant, I am always available to discuss any issues or challenges you may be uniquely facing, and I will do my best to identify available support and help you succeed. \\\\[0.3cm]\
+\
+% AI policy \
+\\lefthead\{Use of AI and other LLMs\}\{0.3cm\}\
+The application and utility of AI in economics is still evolving. I acknowledge the practical uses of AI to save time on tedious tasks or enhance learning outcomes, and I acknowledge healthy and practical AI use may confer future employment benefit on students. I am committed to encouraging ethical and functional use of AI tools which do not inhibit the development of critical thinking skills. Within this class, you are welcome to use foundation models (ChatGPT, GPT, Claude, Copilot, Gemini, or any models after) to support your learning of economics theory, as AI may provide you with supplemental and alternative forms of engagement or review of course materials. AI may provide additional or alternative explanations or an organization of the concepts and thoughts that support a deeper comprehension of the subject for yourself.\\\\\
+\
+\\noindent As a general reminder, material generated by AI models may be inaccurate, incomplete, or otherwise problematic. Beware that use may also stifle your own independent thinking and creativity. \\\\[0.1cm]\
+\
+\\noindent To provide clear boundaries on the use of AI for \\coursecode, I have provided a list of \\textit\{do's and dont's\}. This policy aims to ensure the academic integrity and originality of your work, as submitted work is subjected to the university's plagiarism and academic integrity policy.\\\\\
+\
+\
+\\noindent \\textbf\{Do not use AI in this context:\}\
+\\begin\{itemize\}\
+    \\item You must never submit any work generated by an AI program as your own for a grade. This includes solutions to problem sets, quizzes, questions posed by instructors, or exams.\
+    \\item Plugging in homework assignments, quiz questions, or ungraded questions directly into the AI platform and subsequently copying the solutions or solution steps produced. This type of use will stifle your ability to think logically about economic problems and how to solve them, inhibiting your success in the course. \
+    \\item Putting the material of the course (lecture notes, textbook chapters, or readings) and asking AI to \\textit\{summarize, extract key points, or identify the most important information\}. The material presented in the course must be understood as a whole and in connection with the wider economic theory, and cannot be distilled to a few facts. \
+    \\item Writing practice problems or study material for the course in preparation for course exams. Foundational models may be able to summarize materials (words), but it is up to you to determine, from your interpretation and review of lecture materials, what information is most relevant, and the way it may be presented in an exam context. Additional practice problems can be found in the textbook. \
+\\end\{itemize\}\
+\
+\
+\\noindent \\textbf\{Use AI:\}\
+\\begin\{itemize\}\
+    \\item Refine and provide high quality prompts (questions) to AI related to course material. This could involve feeding some course information to AI, asking detailed questions about a narrow economic theory, concept or proof. If you provide minimum effort prompts, you will get low quality results.\
+    \\item Prepare questions from lecture materials where you want to engage further.\
+    \\item For more mathematical questions in the homeworks or quizzes, ask AI if there exists other mathematical approaches to the same question. For example, you could ask, \\textit\{"is it possible to demonstrate proof of concept X in an alternative way?"\}. Then, check other source material or bring the alternative solution to section or office hours for review. \
+    \\item You may ask AI if your solution to additional questions (beyond course assignments) are correct and why. Be aware: these models can make inaccurate statements. You can bring questions to me in office hours for review. \
+    \\item If you choose to use AI for any discussion section, please provide disclosure. Like any other source, AI use should be acknowledged (cited). \
+    \\item If you want to find new or divergent economic topics tangential to course material, use AI to identify starting points or people who you can further research. For e.g., if you want to know more about game theory, you may ask AI, \\textit\{"Who did John Nash work with? Who cited John Nash? What were some foundational texts for game theory?"\}\
+\\end\{itemize\}\
+\
+\\noindent \\\\[-0.5cm]\
+\
+% Grading \
+\\lefthead\{Grading\}\{0.3cm\} \
+Please submit all work on time for grading. The following will hold: \
+\\begin\{itemize\}\
+    \\item \\textbf\{Late work (without prior approval from instructor) will not be accepted.\} \
+    \\item \\textbf\{I cannot offer re-grading on any assignment or exam.\} Please contact the course instructor if you have a concern on grading. \
+\\end\{itemize\}\
+All students are subject to the Academic Integrity Policy for Undergraduate Students. Completing authentic work is required, and is the only way I can provide a fair assessment to you. If you submit work that appears to have been written using unauthorized sources, I will refer you to the course instructor. Cheating, in any form, may result in a zero on the assignment and a referral to the university administration for further sanctions. \\\\[0.3cm]\
+\
+% ADA Statement\
+% NOTE: This exact language is mandated by UCSC for all syllabi/section info sheets. If you are at a different university, replace this section with your institution's required accommodations statement \
+\\lefthead\{Accessibility\}\{0.3cm\}\
+\\noindent \\university\\ is committed to creating an academic environment that supports its diverse student body. If you are a student with a disability who requires accommodations to achieve equal access in this course, please affiliate with the \\accessibilityoffice. I encourage all students to benefit from learning more about \\accessibilityoffice\\ services to contact \\accessibilityoffice\\ by phone at \\accessibilityphone\\ or by email at \\accessibilityemail. For students already affiliated, make sure that you have requested Academic Access Letters, where you intend to use accommodations. You can also request to meet privately with me during my office hours or by appointment, as soon as possible. I would like us to discuss how we can implement your accommodations in this course to ensure your access and full engagement in this course. \\\\[0.3cm]\
+\
+\
+\\end\{document\}}
