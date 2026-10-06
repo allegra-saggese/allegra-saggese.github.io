@@ -85,7 +85,10 @@ Baseline used for comparison: initial import commit on `2025-01-25` (`e5ced30`),
   - larger sidebar body text
   (`/_sass/_sidebar.scss`)
 
-### 9) Template configuration behavior changes
+### 9) Teaching page
+- `/_pages/teaching.html` (nav label `Learning`) carries the teaching statement and resource links, including a sample syllabus with community and AI-use policy: `/files/sample-syllabus.pdf`, with an editable `/files/sample-syllabus-template.rtf`. Update both together.
+
+### 10) Template configuration behavior changes
 - Updated publication category groups and labels to project-specific taxonomy (`/_config.yml`).
 - Enabled read-more behavior for excerpts (`read_more: "enabled"`) (`/_config.yml`).
 - Updated repository/site metadata and sidebar author profile defaults to project values (`/_config.yml`).
@@ -93,11 +96,11 @@ Baseline used for comparison: initial import commit on `2025-01-25` (`e5ced30`),
 ## Maintenance Notes (for future updates)
 
 ### 1) Update the CV
-1. Add the new CV PDF to `/files/` (example naming convention: `YYYY-MM-Saggese-CV.pdf`).
+1. Add the new CV PDF to `/files/` (the current file is `06-26-saggese-CV.pdf`; the older `2026-02-Saggese-CV.pdf` is kept but no longer linked. Pick one naming convention and stick to it).
 1. Update the homepage CV link in `/_pages/index.md`.
 1. Search for old CV filenames and replace any remaining references:
    ```bash
-   rg "Saggese-CV|CV.pdf|2026-02-Saggese-CV" _pages files README.md
+   rg "saggese-CV|Saggese-CV|CV.pdf" _pages files README.md
    ```
 1. Optional: if you want a dedicated top-nav CV page again, uncomment the CV item in `/_data/navigation.yml`.
 
@@ -116,7 +119,7 @@ Baseline used for comparison: initial import commit on `2025-01-25` (`e5ced30`),
    ---
    ```
 1. Valid category values are controlled in `/_config.yml` under `publication_category`:
-   `drafts`, `manuscripts`, `publications`, `other`.
+   `drafts` (shown as "WIP"), `manuscripts` ("Working papers"), `publications` ("Peer reviewed"), `other` ("Policy work").
 
 ### 3) Add, drop, or swap photos in the homepage gallery
 1. Store images in `/images/about-gallery/`.
