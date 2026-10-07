@@ -9,46 +9,123 @@ hide_title: true
 {% include base_path %}
 
 <style>
-  .data-github-link {
-    color: #E91E8C;
-  }
-  .data-github-link:hover {
-    color: #C0390C;
-  }
-  .data-gallery__featured {
-    margin: 0 0 1.5em;
-  }
-  .data-gallery__featured img {
+  .data-github-link { color: #E91E8C; }
+  .data-github-link:hover { color: #C0390C; }
+
+  .data-section { margin-bottom: 3em; }
+  .data-section h2 { margin-bottom: 0.3em; }
+  .data-section__desc { font-size: 0.85em; color: #555; margin-bottom: 1.2em; }
+
+  .data-featured-png {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
   }
-  .data-gallery__featured figcaption {
-    margin-top: 0.5em;
+  .data-featured-caption {
+    font-size: 0.78em;
+    color: #777;
+    margin-bottom: 1.5em;
   }
-  .data-gallery--thumbs.gallery--grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  #chart-dual-earner { margin-bottom: 0.5em; }
+  .chart-caption {
+    font-size: 0.78em;
+    color: #777;
+    margin-bottom: 1em;
+  }
+
+  .data-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1em;
+    margin-top: 1em;
+  }
+  .data-thumb img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+  }
+  .data-thumb-caption {
+    font-size: 0.72em;
+    color: #777;
+    margin-top: 0.3em;
   }
 </style>
 
-<p>Data visualizations from work-in-progress research. Source code available on <a href="https://github.com/allegra-saggese" class="data-github-link">GitHub</a> or via request.</p>
+<p style="font-size:0.85em;">Data visualizations from work-in-progress research. Source code available on <a href="https://github.com/allegra-saggese" class="data-github-link">GitHub</a> or via request.</p>
 
-{% for section in site.data.data_gallery %}
-  <h2>{{ section.title }}</h2>
-  {% if section.description %}
-    <p class="data-gallery__description">{{ section.description | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-  {% endif %}
-  {% if section.featured %}
-    <figure class="data-gallery__featured">
-      <img src="{{ section.featured.image_path | prepend: base_path }}" alt="{{ section.featured.alt }}">
-      <figcaption>
-        {% if section.featured.title %}<div class="gallery__title">{{ section.featured.title }}</div>{% endif %}
-        {% if section.featured.caption %}<div class="gallery__caption">{{ section.featured.caption }}</div>{% endif %}
-      </figcaption>
-    </figure>
-  {% endif %}
-  {% if section.items and section.items.size > 0 %}
-    {% include gallery gallery=section.items class="data-gallery data-gallery--thumbs" %}
-  {% elsif section.featured == nil %}
-    <p class="data-gallery__placeholder">Charts coming soon.</p>
-  {% endif %}
-{% endfor %}
+<div class="data-section">
+  <h2>Gender norms and joint household labor choices</h2>
+  <p class="data-section__desc">Analysis of the income elasticity and potential bunching effects of the breadwinner norm, documented by Bertrand et al (2015). I study the gap in both labor hours and income between heterosexual married households. Early analysis suggests when household income is no longer a binding constraint, there are significant reductions of female work hours.</p>
+
+  <!-- Featured: bunching density PNG -->
+  <img class="data-featured-png"
+       src="{{ base_path }}/images/data-female-lab/t2-bunching-density-by-quintile.png"
+       alt="Wife's share of couple labor earnings, bunching density by husband's income quintile">
+  <div class="data-featured-caption">
+    Wife's share of couple labor earnings, by husband's income quintile (Q1 lowest, Q5 highest). Observed density (black) vs. polynomial counterfactual (red dashed). Shaded region marks the 50% threshold. IPUMS USA, 1980–2024.
+  </div>
+
+  <!-- Interactive Vega-Lite: dual earner share by quintile -->
+  <div id="chart-dual-earner"></div>
+  <div class="chart-caption">Share of married couples where both spouses work, by husband's income quintile, 1980–2024. Source: IPUMS USA. Hover for exact values.</div>
+
+  <!-- Static county maps -->
+  <div class="data-thumbs">
+    <div class="data-thumb">
+      <img src="{{ base_path }}/images/data-female-lab/flfpr-by-county-votespread-pres-election-years.png"
+           alt="Female LFPR vs log household income by county">
+      <div class="data-thumb-caption">Female LFPR vs. log median household income, by county, for three presidential election years.</div>
+    </div>
+    <div class="data-thumb">
+      <img src="{{ base_path }}/images/data-female-lab/flfpr-by-county-color.png"
+           alt="Change in female LFPR 2012–2022">
+      <div class="data-thumb-caption">Change in female LFPR (2012–2022) by county income, colored by 2020 presidential vote margin.</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<script>
+(function() {
+  var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 280,
+    "data": {"url": "/files/data-dual-earner-quintile.json"},
+    "encoding": {
+      "x": {"field": "year", "type": "quantitative", "axis": {"format": "d", "title": "Year"}},
+      "y": {
+        "field": "dual_earner_share", "type": "quantitative",
+        "axis": {"format": ".0%", "title": "Share both spouses working"},
+        "scale": {"zero": false}
+      },
+      "color": {
+        "field": "quintile", "type": "nominal",
+        "scale": {
+          "domain": ["Q1","Q2","Q3","Q4","Q5"],
+          "range": ["#d4a5c9","#c06dab","#a0389a","#6e1f6b","#3b0a3d"]
+        },
+        "legend": {"title": "Husband income quintile"}
+      },
+      "tooltip": [
+        {"field": "year", "type": "quantitative", "title": "Year"},
+        {"field": "quintile", "type": "nominal", "title": "Quintile"},
+        {"field": "dual_earner_share", "type": "quantitative", "title": "Both working", "format": ".1%"}
+      ]
+    },
+    "layer": [
+      {"mark": {"type": "line", "point": false, "strokeWidth": 2}},
+      {"mark": {"type": "point", "opacity": 0, "size": 100},
+       "selection": {"hover": {"type": "single", "on": "mouseover", "nearest": true}}}
+    ],
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": true, "gridColor": "#eee", "labelFontSize": 11, "titleFontSize": 12}
+    }
+  };
+  vegaEmbed('#chart-dual-earner', spec, {actions: false, renderer: 'svg'});
+})();
+</script>
