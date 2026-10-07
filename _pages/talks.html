@@ -6,12 +6,94 @@ author_profile: true
 hide_title: true
 ---
 
-{% if site.talkmap_link == true %}
+{% include base_path %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+<style>
+  .talks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5em;
+    margin-top: 1em;
+  }
+  .talk-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease;
+  }
+  .talk-card:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  }
+  .talk-card__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    background: #f0ede8;
+  }
+  .talk-card__image--placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #f0ede8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .talk-card__body {
+    padding: 0.85em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .talk-card__type {
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    margin-bottom: 0.4em;
+  }
+  .talk-card__title {
+    font-size: 0.82em;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0 0 0.5em;
+  }
+  .talk-card__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .talk-card__title a:hover {
+    text-decoration: underline;
+    color: #C0390C;
+  }
+  .talk-card__meta {
+    font-size: 0.65em;
+    color: #888;
+    margin-top: auto;
+  }
+</style>
 
-{% endif %}
-
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+<div class="talks-grid">
+  {% for post in site.talks reversed %}
+    <div class="talk-card">
+      {% if post.header.teaser %}
+        <img class="talk-card__image" src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title }}">
+      {% else %}
+        <div class="talk-card__image--placeholder"></div>
+      {% endif %}
+      <div class="talk-card__body">
+        <div class="talk-card__type">{{ post.type }}{% if post.venue %} &middot; {{ post.venue }}{% endif %}</div>
+        <div class="talk-card__title">
+          {% if post.link %}
+            <a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>
+          {% else %}
+            {{ post.title }}
+          {% endif %}
+        </div>
+        <div class="talk-card__meta">{{ post.date | date: "%B %Y" }}{% if post.location %} &middot; {{ post.location }}{% endif %}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

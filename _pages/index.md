@@ -27,7 +27,8 @@ redirect_from:
 
 <p>Find my CV <a href="/files/06-26-saggese-CV.pdf">here</a>.</p>
 
-<p>&rarr; <em><a href="https://www.theigc.org/blogs/green-jobs-climate-change-reshaping-work" style="color: #E91E8C;">New blog on green jobs out [June 2026]</a></em></p>
+{% assign latest_blog = site.talks | sort: "date" | where_exp: "item", "item.link != nil" | last %}
+{% if latest_blog %}<p>&rarr; <em><a href="{{ latest_blog.link }}" style="color: #E91E8C;">New: {{ latest_blog.title }} [{{ latest_blog.date | date: "%B %Y" }}]</a></em></p>{% endif %}
 </div>
 
 <div style="margin-top: 3em;"></div>
