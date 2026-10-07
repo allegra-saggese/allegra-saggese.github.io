@@ -18,8 +18,12 @@ hide_title: true
 
   .data-featured-png {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 0.5em;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    background: #f7f3ef;
+    padding: 0.75em;
+    box-sizing: border-box;
   }
   .data-featured-caption {
     font-size: 0.78em;
@@ -27,7 +31,13 @@ hide_title: true
     margin-bottom: 1.5em;
   }
 
-  #chart-dual-earner { margin-bottom: 0.5em; }
+  #chart-dual-earner {
+    margin-bottom: 0.5em;
+    background: #f7f3ef;
+    border-radius: 10px;
+    padding: 1em 1em 0.5em;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
   .chart-caption {
     font-size: 0.78em;
     color: #777;
@@ -74,7 +84,7 @@ hide_title: true
   <figure style="max-width:680px; margin: 2em auto 0;">
     <img src="{{ base_path }}/images/data-female-lab/bkp-era-comparison.png"
          alt="Has the 0.5 cliff changed? BKP era vs 10 years on"
-         style="width:100%; border-radius:8px; display:block;">
+         style="width:100%; border-radius:10px; display:block; background:#f7f3ef; padding:0.75em; box-sizing:border-box; box-shadow:0 2px 16px rgba(0,0,0,0.08);">
     <figcaption style="font-size:0.78em; color:#777; margin-top:0.5em; text-align:center;">
       The spike at 50% — where wives' earnings equal husbands' — persists a decade after Bertrand, Kamenica &amp; Pan (2015). Young couples, triangular-kernel density, same sample construction as BKP Figure 1.
     </figcaption>
@@ -88,7 +98,7 @@ hide_title: true
 (function() {
   var spec = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
+    "width": 680,
     "height": 280,
     "data": {"url": "/files/data-dual-earner-quintile.json"},
     "encoding": {
