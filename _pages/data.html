@@ -70,14 +70,15 @@ hide_title: true
   <div id="chart-dual-earner"></div>
   <div class="chart-caption">Share of married couples where both spouses work, by husband's income quintile, 1980–2024. Source: IPUMS USA. Hover for exact values.</div>
 
-  <!-- Static county map -->
-  <div class="data-thumbs">
-    <div class="data-thumb">
-      <img src="{{ base_path }}/images/data-female-lab/flfpr-by-county-votespread-pres-election-years.png"
-           alt="Female LFPR vs log household income by county">
-      <div class="data-thumb-caption">Female LFPR vs. log median household income, by county, for three presidential election years.</div>
-    </div>
-  </div>
+  <!-- BKP era comparison -->
+  <figure style="max-width:680px; margin: 2em auto 0;">
+    <img src="{{ base_path }}/images/data-female-lab/bkp-era-comparison.png"
+         alt="Has the 0.5 cliff changed? BKP era vs 10 years on"
+         style="width:100%; border-radius:8px; display:block;">
+    <figcaption style="font-size:0.78em; color:#777; margin-top:0.5em; text-align:center;">
+      The spike at 50% — where wives' earnings equal husbands' — persists a decade after Bertrand, Kamenica &amp; Pan (2015). Young couples, triangular-kernel density, same sample construction as BKP Figure 1.
+    </figcaption>
+  </figure>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
